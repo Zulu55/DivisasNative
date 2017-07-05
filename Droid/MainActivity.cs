@@ -33,8 +33,32 @@ namespace DivisasNative.Droid
 
         void ButtonConvert_Click(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrEmpty(editTextPesos.Text))
+            {
+                ShowMessage(
+                    Resources.GetString(Resource.String.Error),
+                    Resources.GetString(Resource.String.NoPesos));
+                return;
+            }
+
+            var pesos = decimal.Parse(editTextPesos.Text);
+            var exchange = Converter.Convert(pesos);
+			editTextDollars.Text = string.Format("${0:N2}", exchange.Dollars);
+			editTextEuros.Text = string.Format("€{0:N2}", exchange.Euros);
+			editTextPounds.Text = string.Format("£{0:N2}", exchange.Pounds);
+		}
+
+        void ShowMessage(string title, string message)
+        {
+            var builder = new AlertDialog.Builder(this);
+            var alert = builder.Create();
+            alert.SetTitle(title);
+            alert.SetMessage(message);
+            alert.SetIcon(Resource.Mipmap.Icon);
+            alert.SetButton(
+                Resources.GetString(Resource.String.Accept), 
+                (s, e) => { });
+            alert.Show();
         }
     }
 }
-

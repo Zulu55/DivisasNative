@@ -16,15 +16,55 @@ namespace DivisasNative.iOS
         [Outlet]
         UIKit.UIButton Button { get; set; }
 
-        [Action ("Button_TouchUpInside:")]
+        [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void Button_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UIButton buttonConvert { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField textFieldDollars { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField textFieldEuros { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField textFieldPesos { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField textFieldPounds { get; set; }
+
+        [Action ("ButtonConvert_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ButtonConvert_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
-            if (Button != null) {
-                Button.Dispose ();
-                Button = null;
+            if (buttonConvert != null) {
+                buttonConvert.Dispose ();
+                buttonConvert = null;
+            }
+
+            if (textFieldDollars != null) {
+                textFieldDollars.Dispose ();
+                textFieldDollars = null;
+            }
+
+            if (textFieldEuros != null) {
+                textFieldEuros.Dispose ();
+                textFieldEuros = null;
+            }
+
+            if (textFieldPesos != null) {
+                textFieldPesos.Dispose ();
+                textFieldPesos = null;
+            }
+
+            if (textFieldPounds != null) {
+                textFieldPounds.Dispose ();
+                textFieldPounds = null;
             }
         }
     }

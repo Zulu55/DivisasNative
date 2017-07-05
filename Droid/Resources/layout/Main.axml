@@ -13,13 +13,14 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp">
         <TextView
-            android:text="@string/title"
+            android:text="@string/Title"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView1" />
+            android:id="@+id/textView1"
+            android:gravity="center" />
         <TextView
-            android:text="@string/pesos"
+            android:text="@string/Pesos"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,7 +32,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/editTextPesos" />
         <Button
-            android:text="@string/convert"
+            android:text="@string/Convert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/buttonConvert"
@@ -40,7 +41,7 @@
             android:background="#ff3949ab"
             android:layout_marginTop="10dp" />
         <TextView
-            android:text="@string/dollars"
+            android:text="@string/Dollars"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,9 +52,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editTextDollars"
-            android:editable="false" />
+            android:editable="false"
+            android:gravity="right" />
         <TextView
-            android:text="@string/euros"
+            android:text="@string/Euros"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,9 +66,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editTextEuros"
-            android:editable="false" />
+            android:editable="false"
+            android:gravity="right" />
         <TextView
-            android:text="@string/pounds"
+            android:text="@string/Pounds"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editTextPounds"
-            android:editable="false" />
+            android:editable="false"
+            android:gravity="right" />
     </LinearLayout>
 </LinearLayout>
